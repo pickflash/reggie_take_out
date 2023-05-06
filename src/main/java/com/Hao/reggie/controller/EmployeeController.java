@@ -9,6 +9,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.util.DigestUtils;
 import org.springframework.web.bind.annotation.*;
@@ -21,6 +22,8 @@ import java.time.LocalDateTime;
 @RequestMapping("/employee")
 public class EmployeeController {
 
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
     @Autowired
     private EmployeeService employeeService;
 
