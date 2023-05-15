@@ -16,6 +16,17 @@ spring:
     redis:
       time-to-live: 1000000
       //单位毫秒
+#主从复制配置
+#  shardingsphere:
+#    datasource:
+#      names: master,slave
+#      master:。。。。。。
+#      salve:。。。。。。
+#      masterslave:。。。。。
+#      props:。。。。。
+#允许bean定义覆盖
+#    main:
+#      allow-bean-definition-overriding: true
 mybatis-plus:
   configuration:
     #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
